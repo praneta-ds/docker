@@ -25,9 +25,9 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/sample-api:latest ./backend
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/sample-api:v1 ./backend
 
     - name: Push Image to Docker Hub
       run: |
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/sample-api:latest
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/sample-api:v1
 
